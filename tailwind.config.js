@@ -13,6 +13,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
+    fill: {
+      current: 'currentColor'
+    },
     colors: {
       transparent: '#00000000',
       'aldermore-yellow': '#FFCD00',
@@ -45,10 +48,13 @@ module.exports = {
   },
   variants: {
     extend: {
-      textColor: ['visited'],
+      textColor: ['visited', 'active'],
       translate: ['group-hover'],
       width: ['group-hover'],
-      height: ['group-hover']
+      height: ['group-hover'],
+      backgroundColor: ['active'],
+      fill: ['active', 'hover'],
+      stroke: ['active', 'focus', 'hover']
     },
   },
   plugins: [],
